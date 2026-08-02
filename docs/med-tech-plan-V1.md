@@ -66,12 +66,15 @@ The detailed phase write-ups later in this document (§3–§7) are the **source
 
 | Ch | Title | T | L | Total |
 |----|-------|---|---|-------|
+| 0 | Python & GitHub Fundamentals *(onboarding prerequisite; +40 h homework)* | 10 | 20 | 30 |
 | 1 | Python for Data Science (NumPy, Pandas, Matplotlib) | 12 | 18 | 30 |
 | 2 | Foundations of Clinical Data (EHR; ICD/CPT/SNOMED/LOINC; HIPAA/GDPR) | 10 | 6 | 16 |
 | 3 | Healthcare Interoperability (HL7 v2, CDA/C-CDA, FHIR, SMART-on-FHIR) | 12 | 16 | 28 |
 | 4 | Core Machine Learning for Medicine (scikit-learn) | 14 | 16 | 30 |
 | 5 | Medical NLP Basics (regex → embeddings) | 10 | 10 | 20 |
-| | **Volume I subtotal** | **58** | **66** | **124** |
+| | **Volume I subtotal (Ch 1–5)** | **58** | **66** | **124** |
+
+> **Chapter 0** is an **onboarding prerequisite** (Python + Git/GitHub from scratch). It uses a distinct **Theory : Labs : Homework = 1 : 2 : 4** model (10 h + 20 h + **40 h homework** = **70 h**) and is the first chapter to introduce the **Homework** component. Its content lives in the per-chapter tree (`docs/Volume I/Chapter 0/`). Because it is pre-course prep with a different model, its hours are **not folded into** the 124 h Volume I core subtotal or the program grand totals — track it separately.
 
 **Volume II — The LLM Era** *(Phase 1)*
 

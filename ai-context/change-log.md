@@ -13,6 +13,12 @@
 
 ## Log (newest first)
 
+### 2026-08-02 — Iteration 13: Chapter 0 — Python & GitHub Fundamentals (new onboarding chapter)
+- **Summary:** Added a new **Chapter 0** (Python + Git/GitHub from scratch) as an onboarding prerequisite, under `docs/Volume I/Chapter 0/`. Introduces a **third component, Homework**, on the owner's **Theory : Labs : Homework = 1 : 2 : 4** model — **10 h theory / 20 h labs / 40 h homework = 70 h**. Files: Theory (11 topics), Labs (0a–0j), Homework (HW 0.1–0.7, submitted via the student's GitHub repo + a merged PR), context log, and `.docx`/`.pdf` for all three content files.
+- **Why:** Owner asked for a fundamentals chapter using the supplied references (W3Schools Python/Git, Python.org tutorial, GitHub Hello World + learning resources, Class Central) and curated Python GitHub repos.
+- **Notes:** Hand-authored (not from the frozen curriculum), so `split-chapters.py` won't touch it. Updated `scripts/export-chapters.sh` to also export `*-Homework.md`. Registered in plan §2.3 as an onboarding row, kept **separate from the core hour totals** (different model). Owner-supplied `lnkd.in` links resolved to canonical repo paths where confident and flagged for verification.
+- **Files:** `docs/Volume I/Chapter 0/*` (new); `docs/med-tech-plan-V1.md` (§2.3); `scripts/export-chapters.sh`.
+
 ### 2026-08-02 — Iteration 12: Change-log relocated; attribution kept out of git identity
 - **Summary:** Moved the change-log to `ai-context/change-log.md` and reworded entries to use generic wording. Updated plan references (header + §12) to the new path. The `.claude/` tool-config folder **is committed** to the repo (owner is fine with the name in files); the only hard requirement is that the AI tool never appear as a GitHub **contributor** or in **commit messages** — handled by using the owner's own git identity (`Igor Alves`) and adding no co-author/"generated with" trailer.
 - **Why:** Owner wants no AI-tool attribution in the contributor list or commit messages (folder/file name is acceptable).

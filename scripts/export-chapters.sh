@@ -16,14 +16,15 @@ LO_PROFILE="$(mktemp -d)/lo"
 count=0
 find docs -type d -name "Chapter *" -print0 | sort -z | while IFS= read -r -d '' dir; do
   shopt -s nullglob
-  mds=("$dir"/*-Theory.md "$dir"/*-Labs.md)
+  mds=("$dir"/*-Theory.md "$dir"/*-Labs.md "$dir"/*-Homework.md)
   [ ${#mds[@]} -gt 0 ] || continue
   for md in "${mds[@]}"; do
     base="$(basename "${md%.md}")"
     pandoc "$md" -f gfm -t docx -o "$dir/$base.docx"
   done
-  # one soffice call per chapter dir converts both docx to pdf beside them
-  "$SOFFICE" --headless --convert-to pdf --outdir "$dir" "$dir"/*-Theory.docx "$dir"/*-Labs.docx \
+  # one soffice call per chapter dir converts the docx to pdf beside them
+  docx=("$dir"/*-Theory.docx "$dir"/*-Labs.docx "$dir"/*-Homework.docx)
+  "$SOFFICE" --headless --convert-to pdf --outdir "$dir" "${docx[@]}" \
     -env:UserInstallation="file://$LO_PROFILE" >/dev/null 2>&1 || true
   echo "  exported: $dir"
 done

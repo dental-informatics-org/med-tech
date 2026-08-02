@@ -14,7 +14,18 @@
       "Bash(printf '\\\\n# local AI-tool config \\(local-only, not part of the repo\\)\\\\n.claude/\\\\n')",
       "Bash(git checkout *)",
       "Bash(git add *)",
-      "Bash(echo \"exit=$? \\(1 = NOT ignored\\)\")"
+      "Bash(echo \"exit=$? \\(1 = NOT ignored\\)\")",
+      "Bash(git commit -q -m 'Add Med-Tech program: plan, curriculum, per-chapter tree, exports, tooling *)",
+      "Bash(git push *)",
+      "Bash(ssh -T git@github.com)",
+      "Bash(git -C /Users/ila/Documents/med-tech remote get-url origin)",
+      "Bash(echo \"remote: $\\(git -C /Users/ila/Documents/med-tech remote get-url origin\\)\")",
+      "Read(//Users/ila/.ssh/**)",
+      "Bash(ssh -T DentalInformatics-GH)",
+      "Bash(git remote *)",
+      "Bash(echo \"remote now: $\\(git remote get-url origin\\)\")",
+      "Bash(ssh -T -o IdentitiesOnly=yes -i ~/.ssh/dental-informatics-GH git@github.com)",
+      "Bash(echo \"exit: $?\")"
     ]
   }
 }
