@@ -36,6 +36,7 @@ for md in "$@"; do
 
   echo "==> $md"
   pandoc "$md" -f gfm -t docx \
+    --reference-doc "$ROOT/scripts/reference.docx" \
     --toc --toc-depth=2 \
     --metadata title="$title" \
     -o "$dir/$base.docx"

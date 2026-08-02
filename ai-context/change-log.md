@@ -13,6 +13,12 @@
 
 ## Log (newest first)
 
+### 2026-08-02 — Iteration 14: House style for all docx/pdf (Arial 12 / 1.5 / justified)
+- **Summary:** Added `scripts/make-reference-docx.py` → builds `scripts/reference.docx`, a pandoc reference enforcing **Arial 12 pt, 1.5 line spacing, justified body text, left-aligned headings** (via docDefaults + Normal style + theme fonts; headings overridden to left). Wired `--reference-doc` into `export-docs.sh` and `export-chapters.sh`. **Regenerated every docx and pdf** (59 docx / 59 pdf, incl. a new plan docx/pdf). Documented the house style in plan §12.
+- **Why:** Owner wants all Word docs in Arial 12, 1.5 spacing, justified, with PDFs redone.
+- **Verified:** styles.xml of generated files shows Arial + `w:line="360"` (1.5) + `jc=both` on body, `jc=left` on Heading1–6; PDF spot-checked visually.
+- **Files:** `scripts/make-reference-docx.py`, `scripts/reference.docx` (new); `scripts/export-docs.sh`, `scripts/export-chapters.sh`; all `docs/**/*.docx` + `*.pdf`; `docs/med-tech-plan-V1.md` (§12).
+
 ### 2026-08-02 — Iteration 13: Chapter 0 — Python & GitHub Fundamentals (new onboarding chapter)
 - **Summary:** Added a new **Chapter 0** (Python + Git/GitHub from scratch) as an onboarding prerequisite, under `docs/Volume I/Chapter 0/`. Introduces a **third component, Homework**, on the owner's **Theory : Labs : Homework = 1 : 2 : 4** model — **10 h theory / 20 h labs / 40 h homework = 70 h**. Files: Theory (11 topics), Labs (0a–0j), Homework (HW 0.1–0.7, submitted via the student's GitHub repo + a merged PR), context log, and `.docx`/`.pdf` for all three content files.
 - **Why:** Owner asked for a fundamentals chapter using the supplied references (W3Schools Python/Git, Python.org tutorial, GitHub Hello World + learning resources, Class Central) and curated Python GitHub repos.

@@ -20,7 +20,7 @@ find docs -type d -name "Chapter *" -print0 | sort -z | while IFS= read -r -d ''
   [ ${#mds[@]} -gt 0 ] || continue
   for md in "${mds[@]}"; do
     base="$(basename "${md%.md}")"
-    pandoc "$md" -f gfm -t docx -o "$dir/$base.docx"
+    pandoc "$md" -f gfm -t docx --reference-doc "$ROOT/scripts/reference.docx" -o "$dir/$base.docx"
   done
   # one soffice call per chapter dir converts the docx to pdf beside them
   docx=("$dir"/*-Theory.docx "$dir"/*-Labs.docx "$dir"/*-Homework.docx)

@@ -25,7 +25,24 @@
       "Bash(git remote *)",
       "Bash(echo \"remote now: $\\(git remote get-url origin\\)\")",
       "Bash(ssh -T -o IdentitiesOnly=yes -i ~/.ssh/dental-informatics-GH git@github.com)",
-      "Bash(echo \"exit: $?\")"
+      "Bash(echo \"exit: $?\")",
+      "Bash(git rm *)",
+      "Bash(grep -q '^\\\\.DS_Store$' .gitignore)",
+      "Bash(git commit -q -m 'Add Chapter 0 — Python & GitHub Fundamentals \\(onboarding\\) *)",
+      "Bash(set -e)",
+      "Bash(git branch *)",
+      "Bash(git fetch *)",
+      "Bash(git reset *)",
+      "Bash(git cherry-pick *)",
+      "Bash(git ls-remote *)",
+      "Bash(pandoc -v)",
+      "Read(//private/tmp/refwork/x/**)",
+      "Bash(python3 -c \"import re; s=open\\('word/theme/theme1.xml',encoding='utf-8'\\).read\\(\\); import re; print\\([re.search\\(r'<a:'+k+r'>.*?typeface=\\\\\"\\([^\\\\\"]*\\)\\\\\"',s,re.S\\).group\\(1\\) for k in \\('majorFont','minorFont'\\)]\\)\")",
+      "Bash(python3 -c \"import re; s=open\\('word/styles.xml',encoding='utf-8'\\).read\\(\\); m=re.search\\(r'<w:style w:type=\\\\\"paragraph\\\\\" w:default=\\\\\"1\\\\\" w:styleId=\\\\\"Normal\\\\\">.*?</w:style>', s, re.S\\); print\\(m.group\\(0\\) if m else 'NONE'\\)\")",
+      "Bash(python3 scripts/make-reference-docx.py)",
+      "Bash(bash scripts/export-docs.sh)",
+      "Bash(bash scripts/export-chapters.sh)",
+      "Bash(git commit -q -m 'Apply house style to all docs: Arial 12, 1.5 spacing, justified *)"
     ]
   }
 }

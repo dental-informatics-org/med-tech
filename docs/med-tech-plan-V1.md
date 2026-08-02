@@ -409,6 +409,7 @@ The final project must involve **training and building a deployable AI system fo
   scripts/export-docs.sh docs/<file>.md  # exports a specific file
   ```
   (Pipeline: `pandoc` md→docx, then LibreOffice `soffice` docx→pdf. Keep the exported `.docx`/`.pdf` next to their source `.md` in `docs/`.)
+  - **House style:** all docx/pdf are generated through `scripts/reference.docx` — **Arial 12 pt, 1.5 line spacing, justified body text, left-aligned headings**. Rebuild that reference with `python3 scripts/make-reference-docx.py` if pandoc's defaults change.
 - **Per-chapter structure (from V1 split onward):** the curriculum is also split into an independent per-chapter tree under `docs/Volume <ROMAN>/Chapter <N>/` — each chapter has `…-Theory.md`, `…-Labs.md` (+ their `.docx`/`.pdf`) and a `…-context.md` AI interaction log. **Each chapter now progresses independently** (its Theory feeds later PowerPoint/video generation). Tooling:
   ```bash
   python3 scripts/split-chapters.py     # (re)create the tree; won't overwrite edited chapters (FORCE=1 to regenerate from the master)
